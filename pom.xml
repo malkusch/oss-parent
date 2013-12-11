@@ -16,11 +16,17 @@
 	</properties>
 	
 	<url>https://github.com/malkusch/${project.artifactId}</url>
+	
 	<scm>
 		<connection>scm:git:git://github.com/malkusch/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:malkusch/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/malkusch/${project.artifactId}</url>
 	</scm>
+	
+	<issueManagement>
+		<system>github</system>
+		<url>https://github.com/malkusch/${project.artifactId}/issues</url>
+	</issueManagement>
 
 	<licenses>
 		<license>
