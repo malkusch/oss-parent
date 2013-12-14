@@ -24,6 +24,13 @@
 		<url>https://github.com/malkusch/${project.artifactId}</url>
 	</scm>
 	
+	<distributionManagement>
+		<site>
+			<id>github</id>
+			<name>Github</name>
+		</site>
+	</distributionManagement>
+	
 	<issueManagement>
 		<system>github</system>
 		<url>https://github.com/malkusch/${project.artifactId}/issues</url>
@@ -53,6 +60,17 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
+	<reporting>
+		<excludeDefaults>true</excludeDefaults>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
 
 	<build>
 		<plugins>
@@ -68,6 +86,7 @@
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -78,6 +97,34 @@
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<skipDeploy>true</skipDeploy>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.9</version>
+				<configuration>
+					<server>github</server>
+					<message>Site for ${project.artifactId}-${project.version}</message>
+					<outputDirectory>${project.reporting.outputDirectory}/apidocs</outputDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>site</goal>
+						</goals>
+						<phase>site-deploy</phase>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
