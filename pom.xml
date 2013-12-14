@@ -24,13 +24,6 @@
 		<url>https://github.com/malkusch/${project.artifactId}</url>
 	</scm>
 	
-	<distributionManagement>
-		<site>
-			<id>github</id>
-			<name>Github</name>
-		</site>
-	</distributionManagement>
-	
 	<issueManagement>
 		<system>github</system>
 		<url>https://github.com/malkusch/${project.artifactId}/issues</url>
