@@ -2,9 +2,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.malkusch.parent</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>1.5-SNAPSHOT</version>
+	<version>1.5</version>
 	<packaging>pom</packaging>
-	
+
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
@@ -15,15 +15,15 @@
 		<java-version>1.7</java-version>
 		<slf4j.version>1.7.5</slf4j.version>
 	</properties>
-	
+
 	<url>https://github.com/malkusch/${project.artifactId}</url>
-	
+
 	<scm>
 		<connection>scm:git:git://github.com/malkusch/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:malkusch/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/malkusch/${project.artifactId}</url>
 	</scm>
-	
+
 	<issueManagement>
 		<system>github</system>
 		<url>https://github.com/malkusch/${project.artifactId}/issues</url>
@@ -55,7 +55,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<reporting>
 		<excludeDefaults>true</excludeDefaults>
 		<plugins>
@@ -105,7 +105,7 @@
 					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -126,7 +126,7 @@
 					<skipDeploy>true</skipDeploy>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
@@ -146,4 +146,35 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>unversionedTestResources</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-resources-plugin</artifactId>
+						<version>2.6</version>
+						<executions>
+							<execution>
+								<id>copy-resources</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>copy-resources</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${project.build.directory}/test-classes</outputDirectory>
+									<resources>
+										<resource>
+											<directory>${basedir}/../../src/test/resources/</directory>
+										</resource>
+									</resources>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
