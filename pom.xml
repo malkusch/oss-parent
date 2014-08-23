@@ -17,7 +17,7 @@
 
 	<properties>
 		<java-version>1.8</java-version>
-		<slf4j.version>1.7.5</slf4j.version>
+		<slf4j.version>1.7.7</slf4j.version>
 	</properties>
 
 	<url>https://github.com/malkusch/${project.artifactId}</url>
