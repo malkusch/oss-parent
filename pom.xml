@@ -66,7 +66,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.7</version>
+				<version>2.8</version>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -83,7 +83,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
+				<version>2.10.3</version>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -100,7 +100,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.3</version>
 				<configuration>
 					<source>${java-version}</source>
 					<target>${java-version}</target>
@@ -113,7 +113,7 @@
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6</version>
+				<version>1.6.5</version>
 				<extensions>true</extensions>
 				<configuration>
 					<serverId>sonatype-nexus-staging</serverId>
@@ -125,7 +125,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>3.3</version>
+				<version>3.4</version>
 				<configuration>
 					<skipDeploy>true</skipDeploy>
 				</configuration>
@@ -134,7 +134,7 @@
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
-				<version>0.9</version>
+				<version>0.11</version>
 				<configuration>
 					<server>github</server>
 					<message>Site for ${project.artifactId}-${project.version}</message>
@@ -158,7 +158,7 @@
 				<plugins>
 					<plugin>
 						<artifactId>maven-resources-plugin</artifactId>
-						<version>2.6</version>
+						<version>2.7</version>
 						<executions>
 							<execution>
 								<id>copy-resources</id>
