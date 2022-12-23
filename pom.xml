@@ -11,21 +11,25 @@
 		<version>9</version>
 	</parent>
 
+	<properties>
+		<github.repository>malkusch/${project.artifactId}</github.repository>
+	</properties>
+	
 	<prerequisites>
 		<maven>3.5.0</maven>
 	</prerequisites>
 
-	<url>https://github.com/malkusch/${project.artifactId}</url>
+	<url>https://github.com/${github.repository}</url>
 
 	<scm>
-		<connection>scm:git:git://github.com/malkusch/${project.artifactId}.git</connection>
-		<developerConnection>scm:git:git@github.com:malkusch/${project.artifactId}.git</developerConnection>
-		<url>https://github.com/malkusch/${project.artifactId}</url>
+		<connection>scm:git:git://github.com/${github.repository}.git</connection>
+		<developerConnection>scm:git:git@github.com:${github.repository}.git</developerConnection>
+		<url>https://github.com/${github.repository}</url>
 	</scm>
 
 	<issueManagement>
 		<system>github</system>
-		<url>https://github.com/malkusch/${project.artifactId}/issues</url>
+		<url>https://github.com/${github.repository}/issues</url>
 	</issueManagement>
 
 	<licenses>
