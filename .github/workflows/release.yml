@@ -8,7 +8,11 @@ on:
         default: true
 
 jobs:
+  test:
+    uses: ./.github/workflows/build.yml
+
   release:
+    needs: [test]
     # if: github.ref == 'refs/heads/master'
     uses: malkusch/github/.github/workflows/maven-central-release.yml@modules
     with:
