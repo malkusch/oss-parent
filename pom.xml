@@ -11,9 +11,14 @@
 		<version>9</version>
 	</parent>
 
-    <modules>
-        <module>test</module>
-    </modules>
+	<profiles>
+		<profile>
+			<id>oss-parent-test</id>
+			<modules>
+				<module>test</module>
+			</modules>
+		</profile>
+	</profiles>
 
     <prerequisites>
 		<maven>3.5.0</maven>
@@ -119,6 +124,12 @@
             </plugins>
         </pluginManagement>
 		<plugins>
+			<plugin>
+				 <artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<preparationProfiles>oss-parent-test</preparationProfiles>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
