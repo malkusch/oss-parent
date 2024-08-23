@@ -4,6 +4,9 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: test
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
