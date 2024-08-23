@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.malkusch.parent</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>3.0.8-SNAPSHOT</version>
+	<version>3.0.8</version>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -21,7 +21,8 @@
 		<connection>scm:git:git://github.com/malkusch/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:malkusch/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/malkusch/${project.artifactId}</url>
-	</scm>
+	  <tag>build-3.0.8</tag>
+  </scm>
 
 	<issueManagement>
 		<system>github</system>
