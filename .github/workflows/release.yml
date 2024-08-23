@@ -9,7 +9,7 @@ on:
 
 jobs:
   release:
-    if: github.ref == 'refs/heads/master'
+    # if: github.ref == 'refs/heads/master'
     uses: malkusch/github/.github/workflows/maven-central-release.yml@master
     with:
       dry-run: ${{ inputs.dry-run }}
