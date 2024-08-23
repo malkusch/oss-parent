@@ -46,6 +46,26 @@
 		</developer>
 	</developers>
 
+	<dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>5.11.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>5.12.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.tomakehurst</groupId>
+                <artifactId>wiremock-jre8</artifactId>
+                <version>2.35.2</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 	<reporting>
 		<excludeDefaults>true</excludeDefaults>
 		<plugins>
@@ -82,6 +102,18 @@
 	</reporting>
 
 	<build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>3.3.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
