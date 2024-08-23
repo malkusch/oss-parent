@@ -18,7 +18,7 @@ jobs:
     with:
       PREPARE_ARGUMENTS: "-P oss-parent-test"
       dry-run: ${{ inputs.dry-run }}
-      JDK_VERSION: ${{ needs.build.outputs.JDK_VERSION }}
+      JDK_VERSION: ${{ needs.test.outputs.JDK_VERSION }}
     secrets:
       MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
       MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
