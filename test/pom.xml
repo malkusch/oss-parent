@@ -6,7 +6,7 @@
     <parent>
         <groupId>de.malkusch.parent</groupId>
         <artifactId>oss-parent</artifactId>
-        <version>3.0.8-SNAPSHOT</version>
+        <version>3.0.9-SNAPSHOT</version>
     </parent>
 
     <artifactId>test</artifactId>
@@ -42,6 +42,13 @@
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>

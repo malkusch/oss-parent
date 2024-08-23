@@ -11,6 +11,10 @@
 		<version>9</version>
 	</parent>
 
+	<modules>
+		<module>test</module>
+	</modules>
+
 	<prerequisites>
 		<maven>3.5.0</maven>
 	</prerequisites>
