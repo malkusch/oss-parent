@@ -9,6 +9,7 @@ on:
 
 jobs:
   release:
+    needs: [build]
     if: github.ref == 'refs/heads/master'
     uses: malkusch/github/.github/workflows/maven-central-release.yml@master
     with:
