@@ -128,6 +128,7 @@
 					<serverId>sonatype-nexus-staging</serverId>
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+					<skipLocalStaging>true</skipLocalStaging>
 					<stagingProgressTimeoutMinutes>30</stagingProgressTimeoutMinutes>
 				</configuration>
 			</plugin>
@@ -157,13 +158,6 @@
 						<phase>site-deploy</phase>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<configuration>
-					<skipLocalStaging>true</skipLocalStaging>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
