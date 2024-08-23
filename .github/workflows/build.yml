@@ -9,3 +9,5 @@ on:
 jobs:
   build:
     uses: malkusch/github/.github/workflows/maven-build.yml@modules
+    with:
+      WORKING_DIRECTORY: test
