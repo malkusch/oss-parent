@@ -8,6 +8,7 @@
     </parent>
 
     <artifactId>test</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -45,7 +46,7 @@
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <configuration>
-                    <skipRemoteStaging>true</skipRemoteStaging>
+                    <skipNexusStagingDeployMojo>true</skipNexusStagingDeployMojo>
                 </configuration>
             </plugin>
         </plugins>
