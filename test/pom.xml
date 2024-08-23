@@ -7,6 +7,7 @@
         <groupId>de.malkusch.parent</groupId>
         <artifactId>oss-parent</artifactId>
         <version>3.0.8-SNAPSHOT</version>
+        <relativePath>../oss-parent/pom.xml</relativePath>
     </parent>
 
     <artifactId>test</artifactId>
