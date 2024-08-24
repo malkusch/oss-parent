@@ -1,23 +1,13 @@
 name: Test
 on:
   push:
+  workflow_call:
+    outputs:
+      JDK_VERSION:
+        value: ${{ jobs.build.outputs.JDK_VERSION }}
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK
-      uses: actions/setup-java@v4
-      with:
-        java-version: 11
-        distribution: temurin
-        cache: maven
-    - name: Build parent
-      run: mvn --batch-mode --update-snapshots clean install -Dmaven.test.skip
-    - name: Unit Tests
-      working-directory: test
-      run: mvn --batch-mode test
-    - name: Integration Tests
-      working-directory: test
-      run: mvn --batch-mode failsafe:integration-test failsafe:verify -Dskip.surefire.tests
+    uses: malkusch/github/.github/workflows/maven-build.yml@master
+    with:
+      WORKING_DIRECTORY: test

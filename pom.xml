@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.malkusch.parent</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>3.0.9-SNAPSHOT</version>
+	<version>3.0.20-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -11,7 +11,16 @@
 		<version>9</version>
 	</parent>
 
-	<prerequisites>
+	<profiles>
+		<profile>
+			<id>oss-parent-test</id>
+			<modules>
+				<module>test</module>
+			</modules>
+		</profile>
+	</profiles>
+
+    <prerequisites>
 		<maven>3.5.0</maven>
 	</prerequisites>
 
