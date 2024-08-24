@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.malkusch.parent</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>3.0.21-SNAPSHOT</version>
+	<version>3.0.22-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<parent>
@@ -17,6 +17,43 @@
 			<modules>
 				<module>test</module>
 			</modules>
+		</profile>
+
+		<profile>
+			<id>update-readme</id>
+			<activation>
+				<file><exists>README.md</exists></file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-release-plugin</artifactId>
+						<configuration>
+							<preparationGoals>-DskipTests clean verify replacer:replace scm:checkin -Dmessage="Update Readme" -DpushChanges=false -Dincludes=README.md</preparationGoals>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>com.google.code.maven-replacer-plugin</groupId>
+						<artifactId>replacer</artifactId>
+						<version>1.5.3</version>
+						<configuration>
+							<file>README.md</file>
+							<regexFlags>
+								<regexFlag>MULTILINE</regexFlag>
+								<regexFlag>DOTALL</regexFlag>
+							</regexFlags>
+							<token>```xml maven.*```</token>
+							<value><![CDATA[```xml maven
+<dependency>
+    <groupId>${project.groupId}</groupId>
+	<artifactId>${project.artifactId}</artifactId>
+	<version>${project.version}</version>
+</dependency>
+```]]></value>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 
