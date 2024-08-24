@@ -11,3 +11,10 @@ updates:
       - "/test"
     schedule:
       interval: "daily"
+    groups:
+      minor-update:
+        update-types:
+        - "minor"
+        - "patch"
+
+
