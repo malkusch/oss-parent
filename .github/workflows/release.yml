@@ -13,7 +13,7 @@ jobs:
 
   release:
     needs: [test]
-    if: github.ref == 'refs/heads/master'
+    # if: github.ref == 'refs/heads/master'
     uses: malkusch/github/.github/workflows/maven-central-release.yml@master
     with:
       PREPARE_ARGUMENTS: "-P oss-parent-test"
