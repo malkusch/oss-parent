@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.malkusch.parent</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>3.0.26-SNAPSHOT</version>
+	<version>3.0.26</version>
 	<packaging>pom</packaging>
 
 	<parent>
