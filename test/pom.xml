@@ -8,6 +8,7 @@
     </parent>
 
     <artifactId>test</artifactId>
+    <name>Tests</name>
 
     <properties>
         <maven.compiler.release>17</maven.compiler.release>
