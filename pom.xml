@@ -122,8 +122,8 @@
     <url>https://github.com/malkusch/${project.artifactId}</url>
 
     <scm>
-        <connection>scm:git:git://github.com/malkusch/${project.artifactId}.git</connection>
-        <developerConnection>scm:git:git@github.com:malkusch/${project.artifactId}.git</developerConnection>
+        <connection>scm:git:https://github.com/malkusch/oss-parent</connection>
+        <developerConnection>scm:git:https://github.com/malkusch/oss-parent</developerConnection>
         <url>https://github.com/malkusch/${project.artifactId}</url>
     </scm>
 
