@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.malkusch.parent</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>3.0.29-SNAPSHOT</version>
+    <version>3.0.29</version>
     <packaging>pom</packaging>
 
     <name>OSS Parent</name>
@@ -127,7 +127,7 @@
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
         <url>https://github.com/malkusch/${project.artifactId}</url>
-      <tag>HEAD</tag>
+      <tag>oss-parent-3.0.29</tag>
   </scm>
 
     <distributionManagement>
