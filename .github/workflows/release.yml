@@ -14,7 +14,7 @@ jobs:
   release:
     needs: [test]
     if: github.ref == 'refs/heads/master'
-    uses: malkusch/github/.github/workflows/maven-central-release.yml@debug
+    uses: malkusch/github/.github/workflows/maven-central-release.yml@master
     with:
       PREPARE_ARGUMENTS: "-P oss-parent-test"
       dry-run: ${{ inputs.dry-run }}
