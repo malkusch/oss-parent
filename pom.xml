@@ -4,8 +4,10 @@
     <groupId>de.malkusch.parent</groupId>
     <artifactId>oss-parent</artifactId>
     <version>3.0.27-SNAPSHOT</version>
-    <name>OSS Parent</name>
     <packaging>pom</packaging>
+
+    <name>OSS Parent</name>
+    <description>Parent POM for my open source projects</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
