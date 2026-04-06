@@ -10,7 +10,7 @@ updates:
       - "/"
       - "/test"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     groups:
       minor-update:
         update-types:
